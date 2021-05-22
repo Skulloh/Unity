@@ -10,16 +10,18 @@ public class PlayerControll : MonoBehaviour
     public float JumpForce = 500f;
     private Rigidbody2D heroBody;
     private float fInput = 0.0f;
-    private bool bFaceRight = true;
+    public bool bFaceRight = true;
     private bool bJump = false;
     private bool bGournded = false;
     private Transform mGroundCheck;
+    private Animator anim;
 
     private Transform mGround;
     void Start()
     {
         heroBody = GetComponent<Rigidbody2D>();
         mGround = transform.Find("GroundCheck");
+        anim = GetComponent<Animator>();
     }
     void FixedUpdate()
     {
@@ -67,5 +69,9 @@ public class PlayerControll : MonoBehaviour
         bGournded = Physics2D.Linecast(transform.position, mGround.position, 1 << LayerMask.NameToLayer("Ground"));
         bJump = Input.GetButtonDown("Jump");
         Jump();
+        if (heroBody.velocity.x>0.1)
+        {
+            anim.SetFloat("speed",0.23f);
+        }
     }
 }
