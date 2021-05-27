@@ -7,8 +7,6 @@ using UnityEngine.UIElements;
 public class Gun : MonoBehaviour
 {
     public Rigidbody2D rocket;
-    public Rigidbody2D smoke;
-    public Rigidbody2D flame;
     private float fSpeed = 10;
     private PlayerControll playerCtrl;
     private Animator anim;
@@ -30,20 +28,12 @@ public class Gun : MonoBehaviour
             {
                 Rigidbody2D Rocketinstance = Instantiate(rocket,transform.position,Quaternion.Euler(direction));
                 Rocketinstance.velocity = new Vector2(fSpeed,0);
-                Rigidbody2D smokeinstance = Instantiate(smoke,transform.position,Quaternion.Euler(direction));
-                smokeinstance.velocity = new Vector2(fSpeed,0);
-                
-                Rigidbody2D flameinstance = Instantiate(flame,transform.position,Quaternion.Euler(direction));
-                flameinstance.velocity = new Vector2(fSpeed,0);
             }
             else
             {
+                direction.z = 180;
                 Rigidbody2D Rocketinstance = Instantiate(rocket,transform.position,Quaternion.Euler(direction));
-                Rocketinstance.velocity = new Vector2(-fSpeed,0);
-                Rigidbody2D smokeinstance = Instantiate(smoke,transform.position,Quaternion.Euler(direction));
-                smokeinstance.velocity = new Vector2(-fSpeed,0);
-                Rigidbody2D flameinstance = Instantiate(flame,transform.position,Quaternion.Euler(direction));
-                flameinstance.velocity = new Vector2(-fSpeed,0);
+                Rocketinstance.velocity = new Vector2(-fSpeed, 0);
             }
         }
         

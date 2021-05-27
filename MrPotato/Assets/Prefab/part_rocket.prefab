@@ -146,7 +146,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 7775058746931035174, guid: dd3a67b134cf5ea498b844b15203dad2,
     type: 3}
-  smoke: {fileID: 1553537447718680993, guid: fbefc78427f528342b22cb33239a389f, type: 3}
 --- !u!82 &-4685988381420080426
 AudioSource:
   m_ObjectHideFlags: 0

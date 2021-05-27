@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - body
+  - falme
+  - rocket
+  - smoke
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -50,4 +54,7 @@ TagManager:
     locked: 0
   - name: hero
     uniqueID: 2871331037
+    locked: 0
+  - name: UI
+    uniqueID: 548734925
     locked: 0

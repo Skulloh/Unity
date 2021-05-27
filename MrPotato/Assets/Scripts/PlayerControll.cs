@@ -15,7 +15,6 @@ public class PlayerControll : MonoBehaviour
     private bool bGournded = false;
     private Transform mGroundCheck;
     private Animator anim;
-
     private Transform mGround;
     void Start()
     {
@@ -69,6 +68,10 @@ public class PlayerControll : MonoBehaviour
         bGournded = Physics2D.Linecast(transform.position, mGround.position, 1 << LayerMask.NameToLayer("Ground"));
         bJump = Input.GetButtonDown("Jump");
         Jump();
+        if (bJump)
+        {
+            anim.SetTrigger("Jump");
+        }
         if (heroBody.velocity.x>0.1)
         {
             anim.SetFloat("speed",0.23f);

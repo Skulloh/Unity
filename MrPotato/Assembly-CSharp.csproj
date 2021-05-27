@@ -63,6 +63,7 @@
      <Compile Include="Assets\Scripts\Gun.cs" />
      <Compile Include="Assets\Scripts\MCamera.cs" />
      <Compile Include="Assets\Scripts\PlayerControll.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\Rocket1.cs" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>D:/Unity/Unity/MrPotato/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
