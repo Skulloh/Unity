@@ -33,7 +33,6 @@ public class BackGround : MonoBehaviour
             Vector3 newPos = new Vector3(fNewX, backGround[i].position.y,backGround[i].position.z);
             backGround[i].position = Vector3.Lerp(backGround[i].position,newPos,fSmooth * Time.deltaTime);
         }
-
         previousCamPos = cam.position;
     }
 }

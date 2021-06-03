@@ -41,7 +41,9 @@ public class PlayerControll : MonoBehaviour
         {
             Flip();
         }
+        //if (heroBody.velocity.x > 0.1)
         
+        anim.SetFloat("speed" ,Mathf.Abs(heroBody.velocity.x));
     }
 
     void Jump()
@@ -49,8 +51,10 @@ public class PlayerControll : MonoBehaviour
         if(bJump && bGournded)
         {
             heroBody.AddForce(new Vector2(0f, JumpForce ) );
+            anim.SetTrigger("jump");
             bJump = false;
         }
+        
     }
 
     void Flip()
@@ -68,13 +72,6 @@ public class PlayerControll : MonoBehaviour
         bGournded = Physics2D.Linecast(transform.position, mGround.position, 1 << LayerMask.NameToLayer("Ground"));
         bJump = Input.GetButtonDown("Jump");
         Jump();
-        if (bJump)
-        {
-            anim.SetTrigger("Jump");
-        }
-        if (heroBody.velocity.x>0.1)
-        {
-            anim.SetFloat("speed",0.23f);
-        }
+        
     }
 }

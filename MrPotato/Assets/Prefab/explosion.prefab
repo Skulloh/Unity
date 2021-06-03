@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 7775058746931035168}
   - component: {fileID: 7775058746931035175}
   - component: {fileID: 7775058746931035170}
-  - component: {fileID: 1211482911431147399}
-  m_Layer: 10
+  - component: {fileID: -3572429094840133394}
+  m_Layer: 0
   m_Name: explosion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7775058746931035174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4660728, y: 1.5258307, z: 0}
-  m_LocalScale: {x: 0.097466, y: 0.097466, z: 0.097466}
+  m_LocalPosition: {x: -0.176, y: 3.133, z: 0}
+  m_LocalScale: {x: 0.28430682, y: 0.28430682, z: 0.28430682}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6b943f452d85f4ca1e73c5accfb7d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!82 &1211482911431147399
+--- !u!82 &-3572429094840133394
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
