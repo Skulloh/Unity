@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class PlayerControll : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerControll : MonoBehaviour
     private Transform mGroundCheck;
     private Animator anim;
     private Transform mGround;
+    public AudioClip[] JumoClips;
     void Start()
     {
         heroBody = GetComponent<Rigidbody2D>();
@@ -53,6 +55,8 @@ public class PlayerControll : MonoBehaviour
             heroBody.AddForce(new Vector2(0f, JumpForce ) );
             anim.SetTrigger("jump");
             bJump = false;
+            int i = Random.Range(0, JumoClips.Length);
+            AudioSource.PlayClipAtPoint(JumoClips[i],transform.position);
         }
         
     }

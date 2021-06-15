@@ -12,10 +12,12 @@ public class Enemy : MonoBehaviour
     private int HP = 2;
     private float minSpinForce = -200;
     private float maxSpinForce = 200;
+    public GameObject UI_100Points;
     private bool isDead = false;
     private SpriteRenderer curBody;
     private Rigidbody2D enemyBody;
     private Transform frontCheck;
+    public AudioClip[] EnemyClips;
     private void Awake()
     {
         enemyBody = GetComponent<Rigidbody2D>();
@@ -58,6 +60,10 @@ public class Enemy : MonoBehaviour
         foreach (Collider2D c in cols)
             c.isTrigger = true;
         enemyBody.AddTorque(Random.Range(minSpinForce,maxSpinForce));
+        Vector3 UI100Pos = new Vector3(transform.position.x, transform.position.y+1.5f,0);
+        Instantiate(UI_100Points, UI100Pos, Quaternion.identity);
+        int i = Random.Range(0, EnemyClips.Length);
+        AudioSource.PlayClipAtPoint(EnemyClips[i],transform.position);
     }
 
     void flip()

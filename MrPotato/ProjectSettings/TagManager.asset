@@ -20,8 +20,8 @@ TagManager:
   - 
   - Ground
   - Confiner
-  - 
-  - 
+  - Pickup
+  - Enemy
   - 
   - 
   - 
@@ -54,4 +54,10 @@ TagManager:
     locked: 0
   - name: hero
     uniqueID: 2871331037
+    locked: 0
+  - name: UI
+    uniqueID: 705930783
+    locked: 0
+  - name: Pickup
+    uniqueID: 654243255
     locked: 0
